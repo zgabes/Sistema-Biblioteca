@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Biblioteca</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#">Página Inicial</a></li>
+            <li><a href="#">Usuários</a></li>
+            <li><a href="#">Livros</a></li>
+            <li><a href="#">Empréstimos</a></li>
+            <li><a href="#">Devoluções</a></li>
+            <li><a href="#">Multas</a></li>
+        </ul>
+    </nav>
+    <main class="main-content">
+        <!-- Tela 1: Realizar Empréstimos -->
+        <section id="realizar-emprestimos" class="screen">
+            <h2>Realizar Empréstimos</h2>
+            <form>
+                <label for="data-emprestimo">Empréstimo:</label>
+                <input type="date" id="data-emprestimo" value="2024-06-15">
+                <label for="data-devolucao">Devolução:</label>
+                <input type="date" id="data-devolucao" value="2024-06-28">
+                <label for="pessoa">Pessoa</label>
+                <input type="text" id="pessoa" value="João Victor Barreto">
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" value="O Capital">
+                <label for="copias">Cópias</label>
+                <input type="number" id="copias" value="1">
+                <button type="submit">Realizar Empréstimo</button>
+            </form>
+        </section>
+        <!-- Tela 2: Cadastro de Clientes -->
+        <section id="cadastro-clientes" class="screen">
+            <h2>Cadastro de Clientes</h2>
+            <form>
+                <label for="nome-cliente">Nome</label>
+                <input type="text" id="nome-cliente" value="Gabriel Rodrigues de Melo">
+                <label for="email-cliente">E-mail</label>
+                <input type="email" id="email-cliente" value="gabriel.melo@gmail.com">
+                <label for="telefone-cliente">Telefone</label>
+                <input type="text" id="telefone-cliente">
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+        <!-- Tela 3: Lista de Livros -->
+        <section id="lista-livros" class="screen">
+            <h2>Livros</h2>
+            <button type="button">Adicionar Livro</button>
+            <table>
+                <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Gênero</th>
+                    <th>Setor</th>
+                    <th>Cópias</th>
+                    <th>Ações</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Livro 1</td>
+                    <td>Autor 1</td>
+                    <td>Gênero 1</td>
+                    <td>Setor 1</td>
+                    <td>0</td>
+                    <td><button>Edit</button> <button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>Livro 2</td>
+                    <td>Autor 2</td>
+                    <td>Gênero 2</td>
+                    <td>Setor 2</td>
+                    <td>10</td>
+                    <td><button>Edit</button> <button>Delete</button></td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário -->
+                </tbody>
+            </table>
+        </section>
+        <!-- Tela 4: Realizar Cadastro de Livro -->
+        <section id="cadastro-livros" class="screen">
+            <h2>Realizar Cadastro de Livro</h2>
+            <form>
+                <label for="titulo-livro">Título</label>
+                <input type="text" id="titulo-livro" value="O Mundo Assombrado pelos Demônios">
+                <label for="autor-livro">Autor</label>
+                <input type="text" id="autor-livro" value="Carl Sagan">
+                <label for="genero-livro">Gênero</label>
+                <input type="text" id="genero-livro" value="Biografia">
+                <label for="setor-livro">Setor</label>
+                <input type="text" id="setor-livro" value="Ciências">
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+        <!-- Tela 5 e 6: Buscar Livro -->
+        <section id="buscar-livro" class="screen">
+            <h2>Buscar Livro</h2>
+            <form>
+                <input type="text" placeholder="Buscar Livro:">
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+        <!-- Tela 7: Realizar Devolução -->
+        <section id="realizar-devolucao" class="screen">
+            <h2>Realizar Devolução</h2>
+            <form>
+                <label for="pessoa-devolucao">Pessoa</label>
+                <input type="text" id="pessoa-devolucao" value="João Victor Barreto">
+                <label>O Capital (1)</label>
+                <label>Veias Abertas da América Latina (2)</label>
+                <div>
+                    <p>A devolução está atrasada em 10 dias</p>
+                    <p>Valor inicial da multa: R$5,00</p>
+                    <p>Valor diário da multa: 3% ao dia</p>
+                    <p>Valor total da multa: R$15,00</p>
+                </div>
+                <button type="submit">Realizar Devolução</button>
+            </form>
+        </section>
+        <!-- Tela 8: Configurar Multas -->
+        <section id="configurar-multas" class="screen">
+            <h2>Configurar Multas</h2>
+            <form>
+                <label for="periodo-emprestimo">Período de empréstimo</label>
+                <input type="number" id="periodo-emprestimo" value="14"> Dias
+                <label for="multa-inicial">Multa Inicial</label>
+                <input type="number" id="multa-inicial" value="5"> Reais
+                <label for="acrescimo-diario">Acréscimo diário</label>
+                <input type="number" id="acrescimo-diario" value="3"> %
+                <button type="submit">Realizar Mudanças</button>
+            </form>
+        </section>
+    </main>
+</div>
+</body>
+</html>
